@@ -1,5 +1,17 @@
 import Foundation
 
+func getContents(_ url: String) -> Optional<String> {
+        let url = URL(fileURLWithPath: url)
+
+        do {
+            let contents = try String(contentsOf: url, encoding: .utf8)
+            return contents
+        } catch {
+            print("Error: \(error)")
+        }
+        return nil
+}
+
 @main
 struct Main {
     static func main() {
