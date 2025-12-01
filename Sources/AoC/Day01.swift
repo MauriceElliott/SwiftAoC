@@ -15,8 +15,7 @@ private func getContents(_ url: String) -> Optional<String> {
         return nil
 }
 
-@main
-struct AoC2025Day1 {
+struct Day01 {
     static func main() {
         // let c = getContents("input/day1/input.txt")!
         let c = """
