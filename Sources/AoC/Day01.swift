@@ -53,6 +53,7 @@ L82
                 code += 1
             }
         }
+        print(sequence)
         print(code)
     }
 }
