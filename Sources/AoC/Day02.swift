@@ -1,6 +1,5 @@
 import Foundation
 
-
 struct Day02 {
     static func main() {
         let c = getContents("input/day2/input.txt")!
@@ -12,18 +11,16 @@ struct Day02 {
             let end = Int(range.last!)!
             for i in start...end {
                 let o = String(i)
-                if(o.count % 2 == 0) {
-                    let sp = o.count / 2
-                    let p1 = o.prefix(sp)
-                    let p2 = o.suffix(sp)
-                    print("o: \(o)")
-                    print("sp: \(sp)")
-                    print("p1: \(p1)")
-                    print("p2: \(p2)")
-                    if p1 == p2 {
-                        print("p1 and p2 are the same")
+                let sc = o.count
+                if sc % 2 == 0 {
+                    if sc == 2 && o.first == o.last {
                         total += i
-                        print("new total: \(total)")
+                    } else if sc == 4 && (o.prefix(2) == o.suffix(2) || Set(o).count <= 1) {
+                        total += i
+                    }
+                } else {
+                    if Set(o).count <= 1 {
+                        total += i
                     }
                 }
             }
