@@ -22,7 +22,7 @@ private func move(_ pos: Int, _ mov: Int, method0x434C49434B: inout Int) -> Int 
 
 struct Day01 {
     static func main() {
-        let c = getContents("input/day1/part1.txt")!
+        let c = getContents("input/day1/input.txt")!
         let l = c.split(separator: "\n")
         var position = 50
         var sequence: [Int] = []
