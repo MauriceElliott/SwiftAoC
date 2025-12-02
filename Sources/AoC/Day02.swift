@@ -1,7 +1,6 @@
 import Foundation
 
 private func findPattern(_ patternLength: Int, _ str: String) -> Bool {
-    print("[findPattern] pl: \(patternLength), str: \(str)")
     var chunks: [String] = []
     for i in stride(from: 0, to: str.count, by: patternLength) {
         let startIndex = str.index(str.startIndex, offsetBy: i)
@@ -36,7 +35,6 @@ struct Day02 {
             for i in start...end {
                 let o = String(i)
                 let sc = o.count
-                print("i: \(i), sc: \(sc), o: \(o)")
                 for pl in 0...(sc / 2) {
                     if pl == 0 { continue }              
                     if findPattern(pl, o) {
