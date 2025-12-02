@@ -17,6 +17,8 @@ struct Day02 {
                         total += i
                     } else if sc == 4 && (o.prefix(2) == o.suffix(2) || Set(o).count <= 1) {
                         total += i
+                    } else if sc == 6 && (o.prefix(3) == o.prefix(3) || o.prefix(2) == o.dropFirst(2).prefix(2) || Set(o).count <= 1) {
+                        total += i
                     }
                 } else {
                     if Set(o).count <= 1 {
