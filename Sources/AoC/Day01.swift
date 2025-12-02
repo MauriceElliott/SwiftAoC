@@ -1,11 +1,4 @@
-// The Swift Programming Language
-// https://docs.swift.org/swift-book
-
 import Foundation
-
-private enum Result {
-    
-}
 
 private func move(_ pos: Int, _ mov: Int, method0x434C49434B: inout Int) -> Int {
     let direction = mov >= 0 ? 1 : -1
