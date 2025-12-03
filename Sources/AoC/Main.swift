@@ -25,6 +25,8 @@ struct Main {
         switch day {
         case "1":
             Day01.main()
+        case "2":
+            Day02.main()
         default:
             print("Day \(day) not implemented yet.")
         }
